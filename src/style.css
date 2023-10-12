@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root{
+  --white: #ffffff;
+  --init-color-background: #0e103d;
+
+  --first-section-color-background: #0b1c3f;
+  --first-section-color: #f5f5f5;
+
+  --second-section-color-background: #0b1c3f;
+  --second-section-color: #f5f5f5;
+
+  --third-section-color-background: #0b1c3f;
+  --third-section-color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-project{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: 15px;
+}
+
+.link-project a{
+  margin-left: 10px;
+}
+
+
+
+/********** Experience  **********/
+.experience{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.experience-canvas{
+  width: 100%;
+  height: 100%;
+}
+
+.hidden{
+  display: none;
+}
+
+
+
+/********** Preloader **********/
+.preloader{
+  background-color: var(--init-color-background);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
+  z-index: 99999999999999999;
+}
+
+.preloader-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 12px;
+  background-color: var(--white);
+  animation: load 1s ease-in-out infinite;
+}
+
+.circle:nth-child(2){
+  animation-delay: 0.1s;
+}
+
+.circle:nth-child(3){
+  animation-delay: 0.2s;
+}
+
+@keyframes load {
+  0% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-12px)
+  }
+
+  40% {
+    transform: translateY(0)
+  }
+  
+}
+
+
+
+/********** Pages itself  **********/
+.page{
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper{
+  position: relative;
+}
+
+.page1 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--init-color-background);
+  overflow: hidden;
+}
+
+.page2 {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+
+
+/********** Preloader stuff  **********/
+.animatedis{
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.intro-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-svg-wrapper{
+  position: absolute;
+  bottom: 10%;
+  left: 47%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: bounce 0.5s ease-in alternate infinite;
+}
+
+@keyframes bounce {
+  0%{
+    transform: translateY(0)
+  }
+
+  100%{
+    transform: translateY(8px)
+  }
+}
+
+
+
+/********** Section formatting  **********/
+.section-margin{
+    height: 3000px;
+    width: 100%;
+}
+
+.section{
+    position: relative;
+    width: 50%;
+    padding: 1000px 4%;
+    margin: 0;
+    background-color: var(--first-section-color-background);
+    overflow: hidden;
+}
+
+.left{
+    margin-right: auto;
+    border-top-right-radius: 700px 700px;
+    border-bottom-right-radius: 0px 0 px;
+}
+
+.right{
+    margin-left: auto;
+    border-top-left-radius: 700px 700px;
+    border-bottom-left-radius: 0px 0 px;
+}
+
+
+
+/********** Progress bars  **********/
+.progress-wrapper{
+    height: 0;
+    width: 12px;
+    z-index: 9999;
+}
+
+.progress-bar-wrapper-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.progress-bar-wrapper-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+  
+.progress-bar{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--first-section-color);
+    transform-origin: top center;
+    transform: scaleY(1);
+}
+
+
+/********** Section formatting  **********/
+.section-intro-wrapper{
+    position: relative;
+    padding: 20% 5%;
+    border-bottom: 2px solid var(--first-section-color);
+    padding-bottom: 400px;
+}
+
+.section-detail-wrapper{
+    position: relative;
+    padding: 20% 5%;
+}
+
+.section-heading{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-top: 64px;
+}
+
+.section-text{
+    line-height: 2;
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+
+
+/********** Fancy decoration part of section  **********/
+.section-title{
+    position: relative;
+    color: var(--first-section-color);
+}
+  
+.section-title-text{
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    transform-origin: left;
+    transform: skewY(25deg);
+    z-index: 5;
+    text-transform: uppercase;
+    color: var(--first-section-color);
+}
+  
+.section-title-decoration-styleOne,
+.section-title-decoration-styleTwo,
+.section-title-decoration-styleThree{
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: 278px;
+    height: 60px;
+    border: 2px solid var(--first-section-color);
+    transform-origin: left;
+    transform: skewY(-25deg);
+}
+  
+.section-title-decoration-styleOne{
+    top: 0px;
+}
+  
+.section-title-decoration-styleTwo{
+    top: 80px;
+}
+  
+.section-title-decoration-styleThree{
+    top: 80px;
+    transform: skewY(25deg);
+    background-color: var(--first-section-color);
+}
+
+.section-number{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    color: var(--first-section-color);
+    font-size: 24px;
+}  
+
+
+
+/********** Hero  **********/
+.hero{
+    width: 100%;
+    height: 100vh;   
+}
+
+.hero-wrapper{
+    position: relative;
+    height: 100%;
+    width: calc(100%-160px);
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.hero-main{
+    position: absolute;
+    bottom: 168px;
+    left: 0%;
+}
+
+.hero-second{
+    position: absolute;
+    top: calc(50% - 120px);
+    right: 0%;
+}
+
+.hero-main-title{
+    font-size: 32px;
+}
+
+.hero-main-description{
+    font-size: 18px;
+}
+
+.hero-second-subheading{
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+
+
+/********** Others colors override **********/
+.color-text-2{
+  color: var(--second-section-color);
+}
+
+.color-border-2{
+  border-color: var(--second-section-color);
+}
+
+.color-background-2{
+  background-color: var(--second-section-color);
+}
+
+.color-text-3{
+  color: var(--third-section-color);
+}
+
+.color-border-3{
+  border-color: var(--third-section-color);
+}
+
+.color-background-3{
+  background-color: var(--third-section-color);
+}
+
+
+
+/********** Media Queries **********/
+@media (max-width: 968px){
+  .section{
+    width: 100%;
+  }
+  .progress-bar-wrapper-left{
+    right: 0;
+    left: auto;
+  }
+  .intro-text{
+    top: 55%;
+    font-size: 20px;
+  }
+  .arrow-svg-wrapper{
+    bottom: 5%;
+    left: 45%;
+  }
+  .hero-main{
+    bottom: 120px;
+  }
+  .hero-second{
+    top: 160px;
+  }
+  .hero-wrapper{
+    width: calc(100% - 60px);
+  }
+  .hero-main-title{
+    font-size: 32px;
+  }
+  .hero-main-description{
+    font-size: 18px;
+  }
+  .hero-second-subheading{
+    font-size: 25px;
+  }
+}
