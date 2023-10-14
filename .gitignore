@@ -1,2 +1,4 @@
 dist/
 node_modules/
+/static/cube.glb
+/static/room_prototype.glb
